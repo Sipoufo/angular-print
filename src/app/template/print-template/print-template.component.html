@@ -1,0 +1,49 @@
+<div id="print-section" class="hidden">
+  <div class="flex flex-col w-full h-full gap-8">
+    <!-- Start Header -->
+    <div class="px-6 py-8 flex flex-row justify-between bg-blue-700">
+      <img
+        src="/assets/logo.png"
+        class="w-10 h-10 object-contain"
+        alt="image"
+      />
+      <h1 class="text-white text-2xl font-bold">Angular Printer</h1>
+    </div>
+    <!-- Start table -->
+    <div class="flex flex-col w-full items-center px-10">
+      <h2 class="text-start w-full text-xl font-semibold">My table</h2>
+      <div class="relative w-8/12 overflow-x-auto">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-300">
+            <tr>
+              <th scope="col" class="px-6 py-3">First name</th>
+              <th scope="col" class="px-6 py-3">last name</th>
+            </tr>
+          </thead>
+          <tbody class="bg-gray-100">
+            <tr class="border-b">
+              <td class="px-6 py-4">Silver</td>
+              <td class="px-6 py-4">Laptop</td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4">Silver</td>
+              <td class="px-6 py-4">Laptop</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- End table -->
+  </div>
+</div>
+
+<div class="flex w-full justify-center">
+  <button
+    [useExistingCss]="true"
+    printSectionId="print-section"
+    ngxPrint
+    class="px-4 py-2 rounded-md bg-blue-700 font-medium text-white"
+  >
+    print
+  </button>
+</div>
